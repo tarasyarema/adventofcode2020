@@ -36,7 +36,7 @@ func main() {
 		{`hgt:(1([5-8][0-9]|9[0-3])cm|(59|6[0-9]|7[0-6])in)`, false},
 		{`hcl:#[0-9a-f]{6}`, false},
 		{`ecl:(amb|blu|brn|gry|grn|hzl|oth)`, false},
-		{`pid:[0-9]{9}[^0-9a-zA-Z]`, false},
+		{`pid:[0-9]{9}([^0-9a-zA-Z]|$)`, false},
 	}
 
 	for _, line := range strings.Split(string(b), "\n") {
