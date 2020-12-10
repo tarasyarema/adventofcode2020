@@ -78,17 +78,3 @@ func main() {
 
 	fmt.Println(2, dp[len(dp)-1])
 }
-
-func recurse(a []int) int {
-	sum := 1
-
-	for i := 1; i < len(a); i++ {
-		if a[i]-a[0] > 3 {
-			break
-		}
-
-		sum += recurse(a[i:])
-	}
-
-	return sum
-}
